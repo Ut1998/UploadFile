@@ -5,12 +5,11 @@ import {
   selectedFileHandler,
 } from "../helpers";
 
-const UploadingVideo = () => {
-  const hiddenImageInput = useRef(null);
+const UploadingVideo = (props) => {
+  const hiddenVideoInput = useRef(null);
   const hiddenTextInput = useRef(null);
   const [file, setFile] = useState("");
   const [audio, setAudio] = useState("");
-  const [video, setVideo] = useState("");
 
   const handleUploadFile = (hiddenFileUpload) => {
     hiddenFileUpload.current.click();
@@ -19,20 +18,22 @@ const UploadingVideo = () => {
   return (
     <>
       <div className="image_box">
-        <div className="image_prev"></div>
+        <div className="image_prev">
+          <img src={props.video.file_path} alt="" id="img" />
+        </div>
         <div className="middle_div">
           <button
             id="img_upl"
-            onClick={() => handleUploadFile(hiddenImageInput)}
+            onClick={() => handleUploadFile(hiddenVideoInput)}
             class="btn btn-primary"
           >
             Upload Video
           </button>
           <input
             type="file"
-            ref={hiddenImageInput}
+            ref={hiddenVideoInput}
             accept="video/*"
-            onChange={(event) => selectedFileHandler(event, setVideo)}
+            onChange={(event) => selectedFileHandler(event, props.setVideo)}
             style={{ display: "none" }}
           />
           &nbsp; &nbsp;
@@ -60,7 +61,7 @@ const UploadingVideo = () => {
           </button>
           &nbsp; &nbsp;
           <button
-            onClick={() => handleMergeVideoAudio(video, audio)}
+            onClick={() => handleMergeVideoAudio(props.video, audio)}
             class="btn btn-primary"
             id="merge"
           >

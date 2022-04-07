@@ -13,7 +13,7 @@ const UploadingImage = () => {
   const [image, setImage] = useState({
     status: "ok",
     file_path:
-      "https://th.bing.com/th/id/OIP.RAubIxqEWEwx3kcb0x0JhQHaFj?w=214&h=180&c=7&r=0&o=5&dpr=1.35&pid=1.7",
+      "https://th.bing.com/th/id/OIP.tT6tBsjQq6RzVEjT-nHiXgHaHa?w=178&h=180&c=7&r=0&o=5&dpr=1.35&pid=1.7",
   });
 
   console.log(image);

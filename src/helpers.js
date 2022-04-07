@@ -21,6 +21,7 @@ export const selectedFileHandler = (event, setState) => {
         status: res.data.status,
         file_path:
           "https://video-editor-api.herokuapp.com/" + res.data.file_path,
+        file_path_pass: res.data.file_path,
       });
     });
 };
@@ -28,7 +29,7 @@ export const selectedFileHandler = (event, setState) => {
 export const handleCreateAudio = (file, setAudio) => {
   const formData = new FormData();
   if (file.status === "ok") {
-    formData.append("file_path", file.file_path);
+    formData.append("file_path", file.file_path_pass);
     axios
       .post(
         "https://video-editor-api.herokuapp.com/text_file_to_audio",
@@ -55,8 +56,8 @@ export const handleCreateAudio = (file, setAudio) => {
 export const handleMergeImageAudio = (image, audio) => {
   const formData = new FormData();
   if (image.status === "ok" && audio.status === "ok") {
-    formData.append("image_file_path", image.file_path);
-    formData.append("audio_file_path", audio.file_path);
+    formData.append("image_file_path", image.file_path_pass);
+    formData.append("audio_file_path", audio.file_path_pass);
     axios
       .post(
         "https://video-editor-api.herokuapp.com/merge_image_and_audio",
