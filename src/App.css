@@ -46,17 +46,83 @@
     width: 700px;
     height: 150px;
     margin: 5px auto;
+    display: flex;
 }
 
 .image_prev {
   width: 100px;
   height: 100px;
-  background-image: url("https://th.bing.com/th/id/OIP.RAubIxqEWEwx3kcb0x0JhQHaFj?w=214&h=180&c=7&r=0&o=5&dpr=1.35&pid=1.7");
+  /* background-image: url("https://th.bing.com/th/id/OIP.RAubIxqEWEwx3kcb0x0JhQHaFj?w=214&h=180&c=7&r=0&o=5&dpr=1.35&pid=1.7"); */
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  background-position: center;
+  margin: 10px;
+  border: 0.1px solid #ff36004d;
+  top: -88px;
+}
+
+.video_prev {
+  width: 100px;
+  height: 100px;
+  background-image: url("https://th.bing.com/th?q=Video+Play+Vector&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.35&pid=InlineBlock&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1&mw=247");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   margin: 10px;
   display: inline-block;
-  border: 0.1px solid #ff36004d;
+  border: 1px solid #0c0c0c4d;
   top: -88px;
+  padding: 40px;
+}
+
+#img_upl {
+  float: left;
+  margin-right: 15px;
+}
+
+#text_upl {
+  float: left;
+  margin-right: 15px;
+}
+
+#create_aud {
+  float: left;
+}
+
+#merge {
+  float: left;
+  margin-top: 10px;
+}
+
+.clearAndMerge {
+  margin: 20px;
+  line-height: 120px;
+}
+
+#clearAll {
+  margin-right: 25px;
+  margin-left: 100px;
+}
+
+#add_image {
+  margin-bottom: 20px;
+}
+
+#add_video {
+  margin-bottom: 20px;
+}
+
+.video_prev_merge {
+  background-image: url("https://th.bing.com/th?q=Video+Play+Vector&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.35&pid=InlineBlock&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1&mw=247");
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #0c0c0c4d;
+  padding: 50px;
+  display: inline;
+  margin-left: 100px;
+}
+
+#img {
+  width: 100px;
+  height: 100px;
 }
